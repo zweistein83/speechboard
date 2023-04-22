@@ -21,7 +21,7 @@ const SoundButton =({emoji, labelText, voiceText, buttonColor})=>{
     console.log(voices)
     const speech = new SpeechSynthesisUtterance();
     speech.lang = "no"
-    speech.pitch = 2
+    //speech.pitch = 2
     speech.rate = 1
     speech.text = voiceText;    
     
