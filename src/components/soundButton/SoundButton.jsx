@@ -19,7 +19,7 @@ const Label = styled.div`
 const SoundButton =({emoji, labelText, voiceText, buttonColor})=>{
     const voices = speechSynthesis.getVoices();
     const speech = new SpeechSynthesisUtterance();
-    speech.lang = "NO-nb"
+    speech.lang = "nb-NO"
     speech.pitch = 2
     speech.rate = 1
     speech.text = voiceText;    
