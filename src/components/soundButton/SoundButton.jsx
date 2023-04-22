@@ -18,11 +18,19 @@ const Label = styled.div`
 
 const SoundButton =({emoji, labelText, voiceText, buttonColor})=>{
     const voices = speechSynthesis.getVoices();
+    console.log(voices)
     const speech = new SpeechSynthesisUtterance();
-    speech.lang = "nb-NO"
+    speech.lang = "nb"
     speech.pitch = 2
     speech.rate = 1
     speech.text = voiceText;    
+    
+
+    const no_voice = voices.find((_voice)=>_voice.name.contains("nb"));
+    if (no_voice){
+        speech.voice = no_voice
+    }
+
     
     
     
