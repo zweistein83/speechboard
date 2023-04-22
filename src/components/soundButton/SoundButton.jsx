@@ -25,6 +25,7 @@ const SoundButton =({emoji, labelText, voiceText, buttonColor})=>{
     speech.rate = 1
     speech.text = voiceText;    
     
+    
 
     const no_voice = voices.find((_voice)=>_voice.lang.includes("no"));
     if (no_voice){
@@ -37,9 +38,9 @@ const SoundButton =({emoji, labelText, voiceText, buttonColor})=>{
     
     console.log(voices);
     return (
-        <Container buttonColor={buttonColor} onClick={()=>{speechSynthesis.speak(speech)}}>
+        <Container buttonColor={buttonColor} onClick={()=>{speechSynthesis.speak(speech)}}>            
             <Emoji>{emoji}</Emoji>
-                <Label>{labelText}</Label>
+            <Label>{labelText}</Label>
 
         </Container>
     )

@@ -15,9 +15,14 @@ const Container = styled.div`
 
 function App() {  
 
+  const voices = speechSynthesis.getVoices();
+
   return (
     <>
       <Container>
+      <div>
+                {voices.map((el, idx)=>(<div key={idx}>{el.name} - {el.lang}</div>))}
+            </div>
         <SoundButton emoji={"👍"} labelText={"JA"} voiceText={"Ja"} buttonColor={"green"}/>
         <SoundButton emoji={"👎"} labelText={"NEI"} voiceText={"Nei"} buttonColor={"red"}/>
         <SoundButton emoji={"🚽"} labelText={"Må på do"} voiceText={"Eg må på do"}/>
