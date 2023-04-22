@@ -21,9 +21,9 @@ function App() {
   return (
     <>
       <Container>
-      <div>
+      { false && <div>
                 {voices.map((el, idx)=>(<div key={idx}>{el.name} - {el.lang}</div>))}
-            </div>
+            </div>}
         <SoundButton emoji={"👍"} labelText={"JA"} voiceText={"Ja"} buttonColor={"green"}/>
         <SoundButton emoji={"👎"} labelText={"NEI"} voiceText={"Nei"} buttonColor={"red"}/>
         <SoundButton emoji={"🚽"} labelText={"Må på do"} voiceText={"Eg må på do"}/>

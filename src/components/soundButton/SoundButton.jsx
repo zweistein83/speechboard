@@ -23,10 +23,8 @@ const SoundButton =({emoji, labelText, voiceText, buttonColor})=>{
     speech.lang = "no"
     //speech.pitch = 2
     speech.rate = 1
-    speech.text = voiceText;    
+    speech.text = voiceText;
     
-    
-    //const no_voice = undefined 
     const no_voice = voices.find((_voice)=>_voice.lang.includes("nb-NO"));
     if (no_voice){
         speech.voice = no_voice
@@ -42,7 +40,7 @@ const SoundButton =({emoji, labelText, voiceText, buttonColor})=>{
     console.log(voices);
     return (
         <Container buttonColor={buttonColor} onClick={()=>{speechSynthesis.speak(speech)}}> 
-            <div>{no_voice?.name || "" - no_voice?.lang || ""}</div>           
+            {false && <div>{no_voice?.name || "" - no_voice?.lang || ""}</div>}           
             <Emoji>{emoji}</Emoji>
             <Label>{labelText}</Label>
 
