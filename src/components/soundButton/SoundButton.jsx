@@ -26,13 +26,15 @@ const SoundButton =({emoji, labelText, voiceText, buttonColor})=>{
     speech.text = voiceText;    
     
     
-
+    //const no_voice = undefined 
     const no_voice = voices.find((_voice)=>_voice.lang.includes("nb-NO"));
     if (no_voice){
         speech.voice = no_voice
         speech.lang = no_voice.lang
         console.log(no_voice)
     }
+
+
 
     
     

@@ -11,6 +11,7 @@ const Container = styled.div`
   flex-wrap: wrap; 
   place-items: flex-start; 
   margin: 30px;
+  color: black;
 `
 
 function App() {  
