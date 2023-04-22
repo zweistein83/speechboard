@@ -20,15 +20,16 @@ const SoundButton =({emoji, labelText, voiceText, buttonColor})=>{
     const voices = speechSynthesis.getVoices();
     console.log(voices)
     const speech = new SpeechSynthesisUtterance();
-    speech.lang = "nb"
+    speech.lang = "nb-NO"
     speech.pitch = 2
     speech.rate = 1
     speech.text = voiceText;    
     
 
-    const no_voice = voices.find((_voice)=>_voice.name.contains("nb"));
+    const no_voice = voices.find((_voice)=>_voice.lang.includes("no"));
     if (no_voice){
         speech.voice = no_voice
+        console.log(no_voice)
     }
 
     
