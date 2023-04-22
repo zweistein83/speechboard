@@ -20,7 +20,7 @@ const SoundButton =({emoji, labelText, voiceText, buttonColor})=>{
     const voices = speechSynthesis.getVoices();
     console.log(voices)
     const speech = new SpeechSynthesisUtterance();
-    speech.lang = "nb-NO"
+    speech.lang = "no"
     speech.pitch = 2
     speech.rate = 1
     speech.text = voiceText;    
