@@ -2,17 +2,17 @@ import styled from '@emotion/styled'
 import React from "react"
 
 const Container = styled.button`
-    width: 150px;
-    height: 150px;
+    width:  ${props => props.buttonSize}px;
+    height:  ${props => props.buttonSize}px;
     background-color: ${props => props.buttonColor};
     
 `
 
 const Emoji = styled.div`
-    font-size: 2rem;    
+    font-size: 4rem;    
 `
 const Label = styled.div`
-    font-size: 1rem;
+    font-size:2rem;
 ` 
 
 
@@ -25,6 +25,7 @@ const SoundButton =({emoji, labelText, voiceText, buttonColor})=>{
     //speech.pitch = 2
     speech.rate = 1
     speech.text = voiceText;
+    const buttonSize = 300
     
     const no_voice = voices.find((_voice)=>_voice.lang.includes("nb-NO"));
     if (no_voice){
@@ -40,7 +41,7 @@ const SoundButton =({emoji, labelText, voiceText, buttonColor})=>{
     
     console.log(voices);
     return (
-        <Container buttonColor={buttonColor} onClick={()=>{speechSynthesis.speak(speech)}}> 
+        <Container buttonColor={buttonColor} buttonSize={buttonSize} onClick={()=>{speechSynthesis.speak(speech)}}> 
             {false && <div>{no_voice?.name || "" - no_voice?.lang || ""}</div>}           
             <Emoji>{emoji}</Emoji>
             <Label>{labelText}</Label>
