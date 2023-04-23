@@ -13,17 +13,17 @@ export default defineConfig({
         "name": "Speechboard",
         "icons": [
           {
-            "src": "/images/speechboard_icon_1000.svg",
+            "src": "/speechboard/images/speechboard_icon_1000.svg",
             "type": "image/svg+xml",
             "sizes": "1000x1000"
           },
           {
-            "src": "/images/speechboard_icon_192.png",
+            "src": "/speechboard/images/speechboard_icon_192.png",
             "type": "image/png",
             "sizes": "192x192"
           },
           {
-            "src": "/images/speechboard_icon_512.png",
+            "src": "/speechboard/images/speechboard_icon_512.png",
             "type": "image/png",
             "sizes": "512x512"
           }
