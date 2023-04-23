@@ -18,11 +18,16 @@
         "sizes": "512x512"
       }
     ],
-    "id": "/?source=pwa",
-    "start_url": "/?source=pwa",
+    "dir": "ltr",
+    "start_url": "/speechboard/",
     "background_color": "#3367D6",
     "display": "standalone",
-    "scope": "/",
+    "scope": "/speechboard/",
     "theme_color": "#3367D6",    
-    "description": "Buttons that utters words when clicking on them"   
+    "description": "Buttons that utters words when clicking on them"  ,
+    "display_override": [
+      "standalone",
+      "fullscreen",
+      "minimal-ui"
+    ] 
   }
