@@ -5,7 +5,7 @@ const Container = styled.button`
     width:  ${props => props.buttonSize}px;
     height:  ${props => props.buttonSize}px;
     background-color: ${props => props.buttonColor};
-    
+    flex-shrink: 0;    
 `
 
 const Emoji = styled.div`
