@@ -9,7 +9,7 @@ const Container = styled.button`
 `
 
 const Emoji = styled.div`
-    font-size: 4rem;    
+    font-size: 9rem;    
 `
 const Label = styled.div`
     font-size:2rem;

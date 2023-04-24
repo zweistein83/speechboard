@@ -17,7 +17,7 @@ const Container = styled.div`
 `
 const ButtonContainer = styled.div`
   display: flex;
-  gap: 20px;
+  gap: 80px;
   width: 800px;  
   overflow-x: hidden;  
   flex-wrap: wrap;
@@ -29,6 +29,7 @@ const Paginator = styled.div`
   gap: 60px;
   width: 100vw;
   justify-content: center;
+  place-items: center;
   margin-top: 100px;
 
 `;
